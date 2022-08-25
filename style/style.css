@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+body {
+    background: url("/home/family/Documentos/programacao/javascript/project1/images/df4e8ba28f912bf9cdf9fa0dfc196411.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokedex-image {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pokedex-image img {
+    width: 300px;
+    height: 100px;
+}
+
+.form {
+    display: flex;
+    font-family: 'Luckiest Guy', cursive;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.form button {
+    font-family: 'Luckiest Guy', cursive;
+    background-color: cadetblue;
+    padding: 10px;
+}
+
+.form input {
+    font-family: 'Luckiest Guy', cursive;
+    background-color: rgb(221, 237, 238);
+    padding: 10px;
+}
+
+#card {
+    font-family: 'Luckiest Guy', cursive;
+    background-image: url("/home/family/Documentos/programacao/javascript/project1/images/bgcard.jpg");
+    width: 250px;
+    height: 320px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1px;
+}
+
+#card img {
+    border-bottom: 1px solid;
+    margin: 2px;
+    height: 130px;
+    width: 130px;
+}
+
+#header-link {
+    display: flex;
+    margin: 30px;
+}
+
+#cards-itens {
+    display: flex;
+}
+
+#cardItem {
+    font-family: 'Luckiest Guy', cursive;
+    background-image: url("/home/family/Documentos/programacao/javascript/project1/images/bgcard.jpg");
+    width: 200px;
+    height: 250px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1px;
+    font-size: 15px;
+    line-height: 2px;
+}
+
+#cardItem img {
+    border-bottom: 1px solid;
+    margin: 2px;
+    height: 100px;
+    width: 100px;
+}
+
+#header-link a {
+    font-family: 'Luckiest Guy', cursive;
+    color: black;
+}
+
+#buttonSave {
+    font-family: 'Luckiest Guy', cursive;
+    background-color: cadetblue;
+    padding: 5px;
+}
