@@ -1,6 +1,7 @@
 buscarPokemon = async () => {
-    const input = document.getElementById("input").value.toLowerCase();
-    const retornoBusca = await fetchPokemonApi(input);
+    const input = document.getElementById("input");
+    const search = input.value.toLowerCase();
+    const retornoBusca = await fetchPokemonApi(search);
     const content = document.getElementById("content");
     clear();
     if (retornoBusca != null) {
@@ -8,6 +9,7 @@ buscarPokemon = async () => {
     } else {
         content.innerHTML = "<h3>Nenhum Pokemon encontrado, tente outra busca"
     }
+    input.value = "";
 }
 
 const fetchPokemonApi = async (endPoint) => {
