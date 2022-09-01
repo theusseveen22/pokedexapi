@@ -4,7 +4,6 @@ buscarPokemon = async () => {
     const content = document.getElementById("content");
     clear();
     if (retornoBusca != null) {
-        console.log(retornoBusca);
         createCard(retornoBusca.sprites.front_default, retornoBusca.name, retornoBusca.abilities);
     } else {
         content.innerHTML = "<h3>Nenhum Pokemon encontrado, tente outra busca"
@@ -17,7 +16,6 @@ const fetchPokemonApi = async (endPoint) => {
         const data = await api.json();
         return data;  
     } catch (error) {
-        console.log(error);
         return null;
     } 
 }
@@ -41,7 +39,6 @@ const createCard = (img, titulo, conteudo) => {
     newDivCard.appendChild(createHability);
         
     conteudo.map((itens) => {
-        console.log(itens);
         const pItem = document.createElement("p");
         pItem.innerText = itens.ability.name;
         newDivCard.appendChild(pItem);
@@ -64,7 +61,7 @@ const saveOnCard = async (nome) => {
     const retornoBusca = await fetchPokemonApi(nome);
     const getCards = JSON.parse(localStorage.getItem('pokemons'));
     if (getCards === null) {
-        console.log('sem ter nada salvo', arr)
+        arr.push(retornoBusca);
         localStorage.setItem('pokemons', JSON.stringify(arr));
     } else {
         getCards.push(retornoBusca);
@@ -83,7 +80,7 @@ const createButton = (nome) => {
 
 window.onload = () => {
     const getCardsPage = JSON.parse(localStorage.getItem('pokemons'));
-    console.log(' ss ', getCardsPage);
+    
     const divCard = document.getElementById("cards-itens");
     if (getCardsPage !== null) {
         getCardsPage.map((element) => {    
@@ -104,7 +101,6 @@ window.onload = () => {
             createCard.appendChild(h3);
 
             element.abilities.map((itens) => {
-                console.log(itens);
                 const pItem = document.createElement("p");
                 pItem.innerText = itens.ability.name;
                 createCard.appendChild(pItem);
